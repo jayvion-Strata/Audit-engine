@@ -1,0 +1,57 @@
+[
+  {
+    "case_id": "TC_001_PERFECT_EXECUTION",
+    "inputs": {
+      "acv": 36500.0,
+      "days_elapsed": 73,
+      "discount": 2500.0
+    },
+    "candidate_submission": 23989.0,
+    "expected_verdict": "PASS",
+    "expected_error": null
+  },
+  {
+    "case_id": "TC_002_FORGOT_CLAWBACK",
+    "inputs": {
+      "acv": 36500.0,
+      "days_elapsed": 73,
+      "discount": 2500.0
+    },
+    "candidate_submission": 26864.0,
+    "expected_verdict": "FAIL",
+    "expected_error": "ERR_ML_01"
+  },
+  {
+    "case_id": "TC_003_WRONG_ORDER_OF_OPERATIONS",
+    "inputs": {
+      "acv": 36500.0,
+      "days_elapsed": 73,
+      "discount": 2500.0
+    },
+    "candidate_submission": 24564.0,
+    "expected_verdict": "FAIL",
+    "expected_error": "ERR_ML_02"
+  },
+  {
+    "case_id": "TC_004_GROSS_TAX_APPLICATION",
+    "inputs": {
+      "acv": 36500.0,
+      "days_elapsed": 73,
+      "discount": 2500.0
+    },
+    "candidate_submission": 25240.0,
+    "expected_verdict": "FAIL",
+    "expected_error": "ERR_ML_03"
+  },
+  {
+    "case_id": "TC_005_RANDOM_ARITHMETIC_ERROR",
+    "inputs": {
+      "acv": 36500.0,
+      "days_elapsed": 73,
+      "discount": 2500.0
+    },
+    "candidate_submission": 22100.5,
+    "expected_verdict": "FAIL",
+    "expected_error": "ERR_UNCLASSIFIED"
+  }
+]

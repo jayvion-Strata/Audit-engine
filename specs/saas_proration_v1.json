@@ -1,0 +1,32 @@
+{
+  "workflow_id": "SAAS_PRORATION_CLAWBACK_V1",
+  "domain": "Fintech & B2B SaaS Billing Operations",
+  "parameters": {
+    "cycle_days": 365,
+    "penalty_rate": 0.2,
+    "clawback_threshold_days": 180,
+    "tax_rate": 0.15,
+    "tolerance_cents": 0.05
+  },
+  "variable_ranges": {
+    "annual_contract_value": {
+      "min": 15000.0,
+      "max": 100000.0,
+      "step": 1000.0
+    },
+    "days_elapsed": {
+      "min": 30,
+      "max": 150
+    },
+    "discount_awarded": {
+      "min": 1500.0,
+      "max": 6000.0,
+      "step": 500.0
+    }
+  },
+  "error_taxonomy": {
+    "ERR_ML_01": "DISCOUNT_CLAWBACK_OMITTED",
+    "ERR_ML_02": "INVERTED_ORDER_OF_OPERATIONS",
+    "ERR_ML_03": "GROSS_TAX_APPLICATION"
+  }
+}
